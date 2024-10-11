@@ -10,5 +10,4 @@ public class CrudApiJpaDemoApplication {
 		SpringApplication.run(CrudApiJpaDemoApplication.class, args);
 	}
 
-
 }

@@ -19,6 +19,10 @@ public class AnimalController {
         return animalService.getAllAnimals();
     }
 
+    @GetMapping("/habitat/{habitat}")
+    public List<Animal> getAnimalsByHabitat(@PathVariable String habitat) {
+        return animalService.getAnimalsByHabitat(habitat);
+    }
     // Get an animal by its ID
     @GetMapping("/{id}")
     public ResponseEntity<Animal> getAnimalById(@PathVariable int id) {

@@ -17,6 +17,11 @@ public class AnimalService {
         return animalRepository.findAll();
     }
 
+    public List<Animal> getAnimalsByHabitat(String habitat) {
+        return animalRepository.findByHabitat(habitat);
+    }
+
+
     // Get an animal by its ID
     public Animal getAnimalById(int id) {
         Optional<Animal> animal = animalRepository.findById(id);
@@ -32,6 +37,7 @@ public class AnimalService {
     public List<Animal> getAnimalsByName(String name) {
         return animalRepository.findByNameContaining(name);
     }
+
 
     // Add a new animal
     public Animal addAnimal(Animal animal) {

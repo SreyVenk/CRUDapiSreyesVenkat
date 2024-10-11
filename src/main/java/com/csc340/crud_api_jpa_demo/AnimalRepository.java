@@ -5,12 +5,11 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+
 @Repository
 public interface AnimalRepository extends JpaRepository<Animal, Integer> {
-
-    // Find all animals by species
+    
     List<Animal> findBySpecies(String species);
-
-    // Find animals whose names contain a specified string
+    List<Animal> findByHabitat(String habitat);
     List<Animal> findByNameContaining(String name);
 }
